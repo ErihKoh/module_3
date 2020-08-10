@@ -259,8 +259,27 @@ const cart = {
     }
     return total;
   },
-  increaseQuantity(productName) {},
-  decreaseQuantity(productName) {},
+  increaseQuantity(productName) {
+    for (const item of this.items) {
+      console.log(item);
+      if (productName === item.name) {
+        item.quantity += 1;
+        return;
+      }
+    }
+  },
+  decreaseQuantity(productName) {
+    for (const item of this.items) {
+      console.log(item);
+      if (productName === item.name) {
+        item.quantity -= 1;
+        return;
+      }
+      if (item.quantity === 0) {
+        cart.items.splice(i, 1);
+      }
+    }
+  },
 };
 
 cart.add({ name: "🍎", price: 50 });
@@ -272,7 +291,7 @@ cart.add({ name: "🍓", price: 110 });
 cart.add({ name: "🍋", price: 60 });
 cart.add({ name: "🍋", price: 60 });
 
-console.table(cart.getItems());
+// console.table(cart.getItems());
 
 // cart.remove("🍎");
 // console.table(cart.getItems());
@@ -280,11 +299,12 @@ console.table(cart.getItems());
 // cart.clear();
 // console.log(cart.getItems());
 
-// cart.increaseQuantity('🍎');
-// console.table(cart.getItems());
+cart.increaseQuantity("🍎");
+console.table(cart.getItems());
 
-// cart.decreaseQuantity('🍋');
-// cart.decreaseQuantity('🍋');
-// console.table(cart.getItems());
+cart.decreaseQuantity("🍋");
+cart.decreaseQuantity("🍋");
+cart.decreaseQuantity("🍋");
+console.table(cart.getItems());
 
-console.log("Total: ", cart.countTotalPrice());
+// console.log("Total: ", cart.countTotalPrice());
