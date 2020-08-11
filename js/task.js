@@ -309,14 +309,10 @@ mood : happy
 
 // // console.log("Total: ", cart.countTotalPrice());
 
-// function weatherInfo(temp) {
-//   var c = convertToCelsius(temp);
-//   if (c > 0) return console.log(c + " is above freezing temperature");
-//   else return console.log(`${c} +  is above freezing temperature`);
+// function cockroachSpeed(s) {
+//   //Good Luck!
+//   let speed = Math.round(s * 27);
+//   return console.log(speed);
 // }
+// cockroachSpeed(1.030700280856988);
 
-// function convertToCelsius(temp) {
-//   var temp = temp - 32 + 5 / 9;
-//   return temp;
-// }
-// weatherInfo(100);
