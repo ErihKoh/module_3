@@ -65,6 +65,24 @@ mood : happy
 //   return bestEmploye;
 // };
 
+// const findBestEmployee = function (employees) {
+//   "use strict";
+//   // Write code under this line
+//   const entries = Object.entries(employees);
+//   let key;
+//   let best = 0;
+//   //   console.log(keys);
+//   for (const entry of entries) {
+//     // console.log(key);
+//     // console.log(employees[key]);
+//     if (entry[1] > best) {
+//       best = entry[1];
+//       key = entry[0];
+//     }
+//   }
+//   return key;
+// };
+
 // // Объекты и ожидаемый результат
 // const developers = {
 //   ann: 29,
@@ -90,7 +108,7 @@ mood : happy
 //   chelsy: 38,
 // };
 // console.log(findBestEmployee(sellers));
-// // 'lux'
+// 'lux'
 
 // task 4
 
@@ -315,4 +333,3 @@ mood : happy
 //   return console.log(speed);
 // }
 // cockroachSpeed(1.030700280856988);
-
