@@ -333,3 +333,16 @@ mood : happy
 //   return console.log(speed);
 // }
 // cockroachSpeed(1.030700280856988);
+const data = {
+  result: 0,
+  nums: [1, 2, 3, 4, 5],
+  computeResult() {
+    const addAll = () => {
+      return this.nums.reduce((total, cur) => total + cur, 0);
+    };
+    this.result = addAll();
+  },
+};
+
+data.computeResult();
+console.log(data.result);
